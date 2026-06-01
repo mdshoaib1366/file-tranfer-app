@@ -30,7 +30,7 @@ export function ConnectionCard({
     <button
       onClick={onClick}
       className={`
-        w-full p-6 rounded-2xl
+        w-full p-6 rounded-2xl cursor-pointer
         glass card-hover
         bg-gradient-to-br ${gradients[variant]}
         text-left

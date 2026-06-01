@@ -122,6 +122,7 @@ export function PeerProvider({ children }: { children: React.ReactNode }) {
           setStatus('error');
           
           if (err.type === 'unavailable-id') {
+            peer.destroy();
             // Generate new ID and retry
             const newId = generatePeerId();
             initializePeer(newId).then(resolve).catch(reject);
